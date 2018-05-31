@@ -1,0 +1,26 @@
+{
+  "name": "amqplib-stream",
+  "version": "0.0.0",
+  "description": "Node Streams interface for RabbitMQ",
+  "main": "./lib/",
+  "directories": {
+    "doc": "doc"
+  },
+  "dependencies": {
+    "amqplib": "^0.5.2"
+  },
+  "devDependencies": {
+    "eslint": "^4.19.1",
+    "stream-assert": "^2.0.3",
+    "tap": "^12.0.1"
+  },
+  "scripts": {
+    "test": "tap ./lib/index.spec.js",
+    "lint": "eslint -c .eslint.json ./lib/ ./doc/example/",
+    "docs": "mash ./doc/README.md > ./README.md || rm ./README.md",
+    "coverage": "npm run test -- --cov",
+    "coverage-report": "npm run coverage --  --coverage-report=html"
+  },
+  "author": "Bas Huis",
+  "license": "ISC"
+}
