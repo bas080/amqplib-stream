@@ -15,11 +15,11 @@
     "tap": "^12.0.1"
   },
   "scripts": {
-    "test": "tap ./lib/index.spec.js",
+    "test": "tap ./lib/*.spec.js",
     "lint": "eslint -c .eslint.json ./lib/ ./doc/example/",
     "docs": "mash ./doc/README.md > ./README.md || rm ./README.md",
     "coverage": "npm run test -- --cov",
-    "coverage-report": "npm run coverage --  --coverage-report=html"
+    "coverage-report": "npm run coverage -- --coverage-report=html"
   },
   "author": "Bas Huis",
   "license": "ISC"

@@ -9,5 +9,5 @@ After installing RabbitMQ you can run the tests with `npm test`.
 ## Coverage
 
 ```
-require-run ./node_modules/.bin/tap --cov ./lib/*.spec.js | grep '|$'
+require-run npm run coverage | grep '|$'
 ```
