@@ -4,7 +4,7 @@ The createWriteStream function creates a stream that publishes to either queues
 or exchanges. This can be configured using some predefined configuration
 helpers, or by writing your own publish configuration.
 
-Amqplib allows one to publish to exchanges to send messages to queues.
+Amqplib allows one to publish to exchanges and to send messages to queues.
 
 ```js
 require ./doc/example/create-write-stream.js

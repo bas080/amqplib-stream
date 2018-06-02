@@ -110,7 +110,7 @@ The createWriteStream function creates a stream that publishes to either queues
 or exchanges. This can be configured using some predefined configuration
 helpers, or by writing your own publish configuration.
 
-Amqplib allows one to publish to exchanges to send messages to queues.
+Amqplib allows one to publish to exchanges and to send messages to queues.
 
 ```js
 const amqplib = require('amqplib')
@@ -199,4 +199,27 @@ installation instructions located at
 [RabbitMQ](https://www.rabbitmq.com/download.html)
 
 After installing RabbitMQ you can run the tests with `npm test`.
+
+## Coverage
+
+```
+-------------------------|----------|----------|----------|----------|-------------------|
+File                     |  % Stmts | % Branch |  % Funcs |  % Lines | Uncovered Line #s |
+-------------------------|----------|----------|----------|----------|-------------------|
+All files                |    95.71 |    76.92 |    94.34 |    96.85 |                   |
+ lib                     |    94.92 |       80 |    93.18 |    96.26 |                   |
+  create-read-stream.js  |    81.25 |      100 |    71.43 |    85.71 |             19,21 |
+  create-write-stream.js |    90.91 |    66.67 |     87.5 |    94.44 |                19 |
+  helpers.js             |      100 |       50 |      100 |      100 |                 4 |
+  helpers.spec.js        |      100 |      100 |      100 |      100 |                   |
+  index.js               |      100 |      100 |      100 |      100 |                   |
+  index.spec.js          |    98.41 |      100 |      100 |    98.28 |               124 |
+ lib/configuration       |      100 |    66.67 |      100 |      100 |                   |
+  content-from-queue.js  |      100 |      100 |      100 |      100 |                   |
+  from-queue.js          |      100 |      100 |      100 |      100 |                   |
+  index.js               |      100 |      100 |      100 |      100 |                   |
+  to-exchange.js         |      100 |        0 |      100 |      100 |                 9 |
+  to-queue.js            |      100 |      100 |      100 |      100 |                   |
+-------------------------|----------|----------|----------|----------|-------------------|
+```
 
