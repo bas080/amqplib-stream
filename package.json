@@ -16,7 +16,7 @@
   },
   "scripts": {
     "test": "tap ./lib/*.spec.js",
-    "lint": "eslint -c .eslint.json ./lib/ ./doc/example/",
+    "lint": "eslint ./lib/ ./doc/example/",
     "docs": "mash ./doc/README.md > ./README.md || rm ./README.md",
     "coverage": "npm run test -- --cov",
     "coverage-report": "npm run coverage -- --coverage-report=html"
