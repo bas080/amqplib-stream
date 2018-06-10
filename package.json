@@ -20,6 +20,10 @@
     "coverage": "npm run test -- --cov",
     "coverage-report": "npm run coverage -- --coverage-report=html"
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/bas080/amqplib-stream"
+  },
   "author": "Bas Huis",
   "license": "ISC"
 }
