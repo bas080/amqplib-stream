@@ -1,4 +1,4 @@
-## `createReadStream`
+### `createReadStream`
 
 The createReadStream function creates a stream that consumes messages from a
 queue. This can be configured with the `fromQueue` configuration helper.
@@ -13,7 +13,7 @@ a read stream.
 require ./doc/example/create-read-stream.js
 ```
 
-### `fromQueue`
+#### `fromQueue`
 
 Results in a stream of amqplib messages. These can be used with
 `channel.(ack|nack)` or other `amqplib` library features.
@@ -22,7 +22,7 @@ Results in a stream of amqplib messages. These can be used with
 require ./doc/example/read-from-queue.js
 ```
 
-### `contentFromQueue`
+#### `contentFromQueue`
 
 Won't require acking manually. Acking is done as soon as the message is written
 to the stream. If you need to manually ack then use `fromQueue` instead.
@@ -30,7 +30,7 @@ to the stream. If you need to manually ack then use `fromQueue` instead.
 Reason why is because acking requires a message object. This config function
 results in a stream where only the message's content is part of the stream.
 
-### Custom read configuration
+#### Custom read configuration
 
 It is also possible to write your own read function.
 

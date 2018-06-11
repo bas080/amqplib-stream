@@ -14,7 +14,7 @@ The whole api consist out of two main functions named `createReadStream` and
 `createWriteStream`. These can be configured to use a specific connection and/or
 channel.
 
-## `createReadStream`
+### `createReadStream`
 
 The createReadStream function creates a stream that consumes messages from a
 queue. This can be configured with the `fromQueue` configuration helper.
@@ -36,7 +36,7 @@ createReadStream({
 })
 ```
 
-### `fromQueue`
+#### `fromQueue`
 
 Results in a stream of amqplib messages. These can be used with
 `channel.(ack|nack)` or other `amqplib` library features.
@@ -58,7 +58,7 @@ createReadStream({
 }).pipe(ackAll)
 ```
 
-### `contentFromQueue`
+#### `contentFromQueue`
 
 Won't require acking manually. Acking is done as soon as the message is written
 to the stream. If you need to manually ack then use `fromQueue` instead.
@@ -66,7 +66,7 @@ to the stream. If you need to manually ack then use `fromQueue` instead.
 Reason why is because acking requires a message object. This config function
 results in a stream where only the message's content is part of the stream.
 
-### Custom read configuration
+#### Custom read configuration
 
 It is also possible to write your own read function.
 
@@ -101,7 +101,7 @@ module.exports = function fromQueueAndNack(name, options) {
 
 The [write streams](##createWriteStream) also allow you to define [custom write behavior](###Custom write configuration).
 
-## `createWriteStream`
+### `createWriteStream`
 
 The createWriteStream function creates a stream that publishes to either queues
 or exchanges. This can be configured using some predefined configuration
@@ -127,7 +127,7 @@ createWriteStream({
 })
 ```
 
-### toQueue
+#### `toQueue`
 
 ```js
 const amqplib = require('amqplib')
@@ -147,7 +147,7 @@ channelPromise.then(() => {
 
 ```
 
-### toExchange
+#### `toExchange`
 
 ```js
 const amqplib = require('amqplib')
@@ -169,6 +169,8 @@ channelPromise.then(() => {
 
 Notice how similar the code examples are. The main difference is the
 configuration function.
+
+#### Custom write configuration
 
 We can also define our own write configuration. Maybe you want to log whenever
 a message is being written with succes.

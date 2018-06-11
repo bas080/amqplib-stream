@@ -1,4 +1,4 @@
-## `createWriteStream`
+### `createWriteStream`
 
 The createWriteStream function creates a stream that publishes to either queues
 or exchanges. This can be configured using some predefined configuration
@@ -10,13 +10,13 @@ Amqplib allows one to publish to exchanges and to send messages to queues.
 require ./doc/example/create-write-stream.js
 ```
 
-### toQueue
+#### `toQueue`
 
 ```js
 require ./doc/example/write-to-queue.js
 ```
 
-### toExchange
+#### `toExchange`
 
 ```js
 require ./doc/example/write-to-exchange.js
@@ -24,6 +24,8 @@ require ./doc/example/write-to-exchange.js
 
 Notice how similar the code examples are. The main difference is the
 configuration function.
+
+#### Custom write configuration
 
 We can also define our own write configuration. Maybe you want to log whenever
 a message is being written with succes.
