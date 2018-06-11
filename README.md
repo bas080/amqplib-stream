@@ -2,6 +2,15 @@
 
 A stream interface for amqplib
 
+- [`createReadStream`](#createreadstream)
+  * [`fromQueue`](#fromqueue)
+  * [`contentFromQueue`](#contentfromqueue)
+  * [Custom read configuration](#custom-read-configuration)
+- [`createWriteStream`](#createwritestream)
+  * [`toQueue`](#toqueue)
+  * [`toExchange`](#toexchange)
+  * [Custom write configuration](#custom-write-configuration)
+
 ## Reasoning
 
 Having an interface that uses the nodejs Stream api makes sense when working
