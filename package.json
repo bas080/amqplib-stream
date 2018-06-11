@@ -30,6 +30,10 @@
     "type": "git",
     "url": "https://github.com/bas080/amqplib-stream"
   },
+  "keywords": [
+    "streams",
+    "amqplib"
+  ],
   "author": "Bas Huis",
   "license": "ISC"
 }
