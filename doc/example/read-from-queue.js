@@ -3,15 +3,12 @@ const {fromQueue, createReadStream} = require('amqplib-stream')
 const {PassThrough} = require('stream')
 const channelPromise = amqplib.connect('amqp://localhost').then(conn => conn.createChannel())
 
-channelPromise.then(channel => {
-  const ackAll = new PassThrough({objectMode: true})
+const ackAll = new PassThrough({objectMode: true})
 
-  ackAll.on('data', msg => channel.ack(msg))
+channelPromise
+  .then(channel => ackAll.on('data', message => channel.ack(message)))
 
-  createReadStream({
-    channel: channelPromise,
-    read: fromQueue('my-queue')
-  }).pipe(ackAll)
-
-})
-
+createReadStream({
+  channel: channelPromise,
+  read: fromQueue('my-queue', {noAck: true})
+}).pipe(ackAll)
