@@ -3,12 +3,12 @@
   "version": "0.0.1",
   "description": "Node Streams interface for RabbitMQ",
   "main": "./lib/",
-  "directories": {
-    "doc": "doc"
-  },
   "dependencies": {
     "amqplib": "^0.5.2"
   },
+  "files": [
+    "lib"
+  ],
   "devDependencies": {
     "eslint": "^4.19.1",
     "pre-commit": "^1.2.2",
