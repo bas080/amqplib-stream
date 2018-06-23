@@ -1,5 +1,7 @@
 # amqplib-stream
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/bas080/amqplib-stream.svg)](https://greenkeeper.io/)
+
 A stream interface for amqplib
 
 - [`createReadStream`](#createreadstream)
