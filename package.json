@@ -1,6 +1,6 @@
 {
   "name": "amqplib-stream",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Node Streams interface for RabbitMQ",
   "main": "./lib/",
   "dependencies": {
@@ -10,14 +10,12 @@
     "lib"
   ],
   "devDependencies": {
-    "eslint": "^4.19.1",
     "markdown-toc": "^1.2.0",
-    "pre-commit": "^1.2.2",
-    "tap": "^12.0.1"
+    "pre-commit": "^1.2.2"
   },
   "scripts": {
-    "test": "tap ./lib/*.spec.js",
-    "lint": "eslint ./lib/ ./doc/example/",
+    "test": "npx tap ./lib/*.spec.js",
+    "lint": "npx eslint ./lib/ ./doc/example/",
     "docs": "mash ./doc/README.md > ./README.md || rm ./README.md",
     "coverage": "npm run test -- --cov",
     "coverage-report": "npm run coverage -- --coverage-report=html"
